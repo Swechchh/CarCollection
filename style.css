@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&family=Source+Sans+Pro:wght@200&display=swap');
+
+
+:root {
+  --yellow: #f9d806;
+  --light-yellow: #ffee8e;
+  --black: #130f40;
+  --light-color: #666;
+  border: .1rem solid rgba(0, 0, .1);
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+.html {
+  font-size: 65%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 9%;
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: black;
+}
+
+.span {
+  color: rgb(239, 239, 8);
+}
+
+.header .navbar a {
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  color: black;
+}
+
+.header .navbar a:hover {
+  color: yellow;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: .5rem;
+  background: yellow;
+  color: black;
+  padding: .8rem 3rem;
+  font-size: medium;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #d7cdcd;
+}
+
+#login-btn i {
+  font-size: 2.3rem;
+  color: var(--light-color);
+  cursor: pointer;
+  display: none;
+}
+
+.header.active {
+  box-shadow: var(--box-shadow);
+  padding: 2rem 99%;
+}
+
+#menubar {
+  display: none;
+  font-size: 2.5rem;
+  color: black;
+  cursor: pointer;
+}
+
+.login-form-container {
+  position: fixed;
+  top: -150;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  background: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.login-form-container.active {
+  top: 0;
+  opacity: 1;
+}
+
+.login-form-container form {
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  background: white;
+  border: var(--border);
+  text-align: center;
+  width: 40rem;
+}
+
+.login-form-container form .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-form-container form .btn {
+  display: block;
+  width: 100;
+  margin: .5rem 0;
+}
+
+.login-form-container form h3 {
+  color: black;
+  font-size: medium;
+  padding-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+.login-form-container form .box {
+  margin: .7rem 0;
+  width: 100%;
+  text-transform: none;
+  color: black;
+  font-size: 1.2rem;
+  padding: 1rem 1.2rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+}
+
+.login-form-container form p {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  color: grey;
+}
+
+.a {
+  color: var(--yellow);
+}
+
+.login-form-container #close-login-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  font-size: 5rem;
+  color: black;
+  cursor: pointer;
+
+}
+
+input[value*="login"] {
+  width: 100%;
+}
+
+.home {
+  padding-top: 150px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.home h1 {
+  font-size: 7.5rem;
+  text-transform: uppercase;
+  color: black;
+}
+
+.home img {
+  width: 100%;
+}
+
+.icon-container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem;
+  background: white;
+}
+
+.icon-container .icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: peachpuff;
+  box-shadow: var(--box-shadow);
+  border-radius: .5rem;
+}
+
+.icon-container .icons i {
+  height: 6rem;
+  width: 6rem;
+  line-height: 6rem;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  background: white;
+  color: var(--black);
+  text-align: center;
+
+}
+
+.icon-container .icons h2 {
+  color: var(--yellow);
+  font-size: 2.5rem
+}
+
+.icon-container .icons:hover {
+  color: var(--yellow);
+  font-size: 2.5rem
+}
+
+
+.heading {
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 4.5rem;
+  color: var(--black);
+}
+
+.vehicle .heading span {
+  position: relative;
+}
+
+.vehicle .heading span::before {
+  content: '';
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #f9d806;
+  z-index: -1;
+}
+
+.vehicle .slider {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  overflow-x: hidden;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--black);
+}
+
+.vehicle .slider .wrapper {
+  position: relative;
+}
+
+.vehicle .slider .wrapper .preNext {
+  cursor: pointer;
+  font-size: 5rem;
+  text-align: center;
+  height: 60%;
+  color: var(--black);
+  z-index: 1;
+}
+
+.vehicle .slider .preNext#preBtn {
+  position: absolute;
+  padding-top: 10%;
+  width: 30%;
+  top: 0;
+  left: 0;
+}
+
+.vehicle .slider .preNext#nextBtn {
+  position: absolute;
+  padding-top: 10%;
+  width: 30%;
+  top: 0;
+  right: 0;
+}
+
+.vehicle .slider .activeCircle .fa-circle {
+  color: var(--yellow);
+  padding-bottom: 3rem;
+}
+
+.vehicle .slider .activeCircle .fa-solid {
+  font-size: 1.25rem;
+}
+
+.vehicle .slider .wrapper .wrapper-box {
+  display: flex;
+  transition: all .2s ease-in-out;
+}
+
+.vehicle .slider .wrapper .wrapper-box .box {
+  width: 300px;
+  text-align: center;
+}
+
+.vehicle .slider .wrapper .wrapper-box .box img {
+  cursor: pointer;
+  width: 250px;
+  opacity: .5;
+
+}
+
+
+@media(max-width:991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+
+  .home {
+    padding-top: 150px;
+  }
+
+}
+
+
+@media(max-width:760px) {
+  .header #login-btn i {
+    display: block;
+  }
+
+  .header #login-btn .btn {
+    display: none;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: black;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .header .navbar a {
+    display: block;
+    margin: 2rem;
+    font-size: 2rem;
+  }
+
+  #menubar {
+    display: block;
+
+  }
+
+  #menubar.fa-xmark {
+    transform: rotate(90deg);
+  }
+
+  .header.active {
+    padding: 2rem;
+  }
+}
+
+
+@media(max-width:450px) {
+  html {
+    font-size: 50%;
+  }
+
+
+}
